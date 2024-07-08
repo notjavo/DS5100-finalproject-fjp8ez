@@ -60,7 +60,7 @@ class Die:
         return outcomes.tolist()
     
 
-    def show_state(self):
+    def show(self):
         '''
         This method shows the current state of the die
 
@@ -68,30 +68,6 @@ class Die:
         Data Frame: A copy of the private DataFrame with faces and weights '''
 
         return self.die_df.copy()
-
-# Test the Die class
-if __name__ == "__main__":
-    # Create an instance of Die with faces 1 to 6
-    faces = np.array([1, 2, 3, 4, 5, 6])
-    die = Die(faces)
-    
-    # Print the initial state of the die
-    print("Initial state of the die:")
-    print(die.show_state())
-    
-    # Change the weight of face 6 to 5.0
-    die.change_weight(6, 5.0)
-
-    
-        
-        
-
-
-    
-
-
-        
-        
 
 class Game:
     ''' This class represents a game consisting of rolling one or more similar dice '''
@@ -188,7 +164,7 @@ class Analyzer:
         jackpots = (self.game._play_df.nunique(axis=1) == 1).sum()
         return jackpots
     
-    def face_counts_per_roll(self):
+    def face_counts(self):
         """
         Computes how many times a given face is rolled in each event.
         
