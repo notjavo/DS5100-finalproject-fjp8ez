@@ -8,6 +8,6 @@ setup(
     url = 'https://github.com/notjavo/DS5100-finalproject-fjp8ez',
     author = 'Javier Alonso',
     author_email= 'fjp8ez@virginia.edu',
-    packages= montecarlo,
+    packages=find_packages()
     
 )
