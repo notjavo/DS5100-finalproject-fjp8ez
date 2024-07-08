@@ -1,0 +1,1 @@
+print("you have offically installed the montecarlo package!")
