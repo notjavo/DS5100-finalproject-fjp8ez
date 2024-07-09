@@ -9,7 +9,7 @@ class Die:
         """
         This init function initializes the Die object with corresponding faces and weights.
         """
-        #code below is checking to see if faces are indeed a Numpy array
+
         if not isinstance(faces, np.ndarray):
             raise TypeError("Faces must be a NumPy array")
         
@@ -49,7 +49,7 @@ class Die:
         num_rolls(int): The number of times to roll the die
 
         Returns:
-        List: A list of outcomes from the rolles '''
+        List: A list of outcomes from the rolls '''
 
         #Code first checks if num_rolls entered is a valid integer 
         if not isinstance(num_rolls,int) or num_rolls <= 0:
