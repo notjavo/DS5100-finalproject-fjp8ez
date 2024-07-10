@@ -1,5 +1,9 @@
 """
 Monte Carlo Simulation Package
+WARNING: Must need Numpy and Pandas installed and loaded before using montecarlo
+
+*import numpy as np*
+*import pandas as pd*
 
 This package includes the following modules:
 - Die: A class to represent a die with faces and weights.
