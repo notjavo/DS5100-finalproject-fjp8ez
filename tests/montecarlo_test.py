@@ -21,7 +21,16 @@ class TestDie(unittest.TestCase):
     def test_roll(self):
         rolls = self.die.roll(10)
         self.assertEqual(len(rolls), 10)
+    
+    def test_show(self):
+        self.die.roll(10)
+        die_df = self.die.show()
+        self.assertIsInstance(die_df, pd.DataFrame)
+        expected_columns = ['faces', 'weights']
+        self.assertTrue(all(col in die_df.columns for col in expected_columns))
+        self.assertEqual(len(die_df), len(self.faces))
 
+        
 class TestGame(unittest.TestCase):
     def setUp(self):
         self.faces = np.array([1, 2, 3, 4, 5, 6])

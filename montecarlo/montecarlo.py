@@ -26,7 +26,7 @@ class Die:
 
     def change_weight(self, face, weight):
         '''
-        This method is used to change the wieght of a single face on the die
+        This method is used to change the weight of a single face on the die
 
         Parameters:
         face: The face whos weight needs to be changed
@@ -53,7 +53,7 @@ class Die:
 
         #Code first checks if num_rolls entered is a valid integer 
         if not isinstance(num_rolls,int) or num_rolls <= 0:
-            raise TypeError ("Number of rolls given must be an integer and a positive numnber")
+            raise TypeError ("Number of rolls given must be an integer and a positive number")
         
         # Code below rolls the die using the weights specified 
         outcomes = np.random.choice(self.die_df['faces'], size=num_rolls, p=self.die_df['weights']/self.die_df['weights'].sum())
@@ -90,7 +90,7 @@ class Game:
 
     def play(self,num_rolls):
         '''
-        Plays the game by rolling all of the dice a given number of time
+        Plays the game by rolling all of the dice a given number of times
         Parameters:
         num_rolls (int): The number of times the dice should be rolled
         '''
