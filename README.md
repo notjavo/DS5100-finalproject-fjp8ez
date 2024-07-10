@@ -57,7 +57,8 @@ print(f"Jackpot count: {jackpot_count}")
 print(combo_counts)
 ```
 
-Module API
+## Module API
+
 Die Class:
 - __init__(self,faces:np.ndarray): Initializes the Die object with faces
 - change_weight(self, face: any, weight:float): Changes weight of a signle face on your die object
