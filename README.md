@@ -62,7 +62,8 @@ print(combo_counts)
 Die Class:
 - __init__(self,faces:np.ndarray): Initializes the Die object with faces
 - change_weight(self, face: any, weight:float): Changes weight of a signle face on your die object
-- roll(self,num_rolls:in =1) rolls die one or more times
+- roll(self,num_rolls:in =1): rolls die one or more times
+- show(self): Shows the current state of the dice and returns private data frame consisting of faces and weights for the Die object
 
 Game Class: 
 - __init__(self,dice: List[Die]): initializes the Game object with a list of dice.
